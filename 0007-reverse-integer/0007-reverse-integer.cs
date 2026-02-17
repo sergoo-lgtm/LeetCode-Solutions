@@ -3,10 +3,10 @@ public class Solution {
         int result = 0;
         
         while (x != 0) {
-            int digit = x % 10;   // ناخد اخر رقم
-            x /= 10;              // نشيل اخر رقم
+            int digit = x % 10;
+            x /= 10;           
             
-            // نتحقق من overflow
+            
             if (result > int.MaxValue / 10 || result < int.MinValue / 10) {
                 return 0;
             }
