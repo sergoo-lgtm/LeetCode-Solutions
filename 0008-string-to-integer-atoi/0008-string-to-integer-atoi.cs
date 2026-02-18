@@ -6,15 +6,12 @@ public class Solution {
         int i = 0;
         int n = s.Length;
 
-        // 1️⃣ Skip leading spaces
         while (i < n && s[i] == ' ')
             i++;
 
-        // لو خلصت السترك
         if (i == n)
             return 0;
 
-        // 2️⃣ Check sign
         int sign = 1;
         if (s[i] == '-') {
             sign = -1;
@@ -25,11 +22,9 @@ public class Solution {
 
         int result = 0;
 
-        // 3️⃣ Read digits
         while (i < n && char.IsDigit(s[i])) {
             int digit = s[i] - '0';
 
-            // 4️⃣ Check overflow BEFORE it happens
             if (result > (int.MaxValue - digit) / 10) {
                 return sign == 1 ? int.MaxValue : int.MinValue;
             }
