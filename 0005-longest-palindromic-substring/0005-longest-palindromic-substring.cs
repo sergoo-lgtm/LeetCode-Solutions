@@ -7,8 +7,8 @@ public class Solution {
         int end = 0;
 
         for (int i = 0; i < s.Length; i++) {
-            int len1 = ExpandFromCenter(s, i, i);     // فردي
-            int len2 = ExpandFromCenter(s, i, i + 1); // زوجي
+            int len1 = ExpandFromCenter(s, i, i);    
+            int len2 = ExpandFromCenter(s, i, i + 1); 
             int len = Math.Max(len1, len2);
 
             if (len > end - start) {
